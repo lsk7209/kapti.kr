@@ -1,0 +1,37 @@
+{
+  "name": "kapt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "content:audit": "node scripts/content/audit-kapt-drafts.mjs",
+    "content:generate:new100": "node scripts/content/generate-kapti-new100.mjs",
+    "content:audit:new100": "node scripts/content/audit-kapti-package.mjs kapti-20260619-new100",
+    "content:generate:extra100": "node scripts/content/generate-kapti-extra100.mjs",
+    "content:audit:extra100": "node scripts/content/audit-kapti-package.mjs kapti-20260619-extra100",
+    "seo:env": "node scripts/seo/validate-env.mjs",
+    "seo:changed": "node scripts/seo/changed-content-urls.mjs",
+    "seo:gsc:sitemap": "node scripts/seo/submit-gsc-sitemap.mjs --dry-run",
+    "seo:indexnow": "node scripts/seo/indexnow-submit.mjs --dry-run",
+    "seo:gsc:owner": "node scripts/seo/gsc-site-owner.mjs --dry-run"
+  },
+  "dependencies": {
+    "next": "^16.2.7",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.1",
+    "eslint-config-next": "^16.2.7",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}
