@@ -62,6 +62,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.45,
     },
     {
+      url: absoluteUrl("/contact"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.45,
+    },
+    {
+      url: absoluteUrl("/privacy"),
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.45,
+    },
+    {
+      url: absoluteUrl("/terms"),
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.45,
+    },
+    {
       url: absoluteUrl(`/apt/${sampleApartment.region.path}/${sampleApartment.slug}`),
       lastModified: now,
       changeFrequency: "monthly",

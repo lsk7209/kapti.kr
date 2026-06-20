@@ -46,6 +46,12 @@ export default function RootLayout({
     name: siteConfig.name,
     url: getSiteUrl(),
     description: siteConfig.description,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "editorial corrections and privacy questions",
+      email: "contact@kapti.kr",
+      availableLanguage: "ko-KR",
+    },
     sameAs: ["https://www.k-apt.go.kr/", "https://www.data.go.kr/"],
   };
   const websiteLd = {

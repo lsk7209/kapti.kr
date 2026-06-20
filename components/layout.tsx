@@ -2,7 +2,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { siteConfig } from "@/lib/site";
 
-export function Header({ active }: { active?: "home" | "region" | "guide" | "learn" | "blog" | "design" | "about" }) {
+type HeaderActive = "home" | "region" | "guide" | "learn" | "blog" | "design" | "about";
+
+export function Header({ active }: { active?: HeaderActive }) {
   return (
     <header className="hd">
       <div className="hd-in">
@@ -18,7 +20,7 @@ export function Header({ active }: { active?: "home" | "region" | "guide" | "lea
             홈
           </Link>
           <Link className={active === "region" ? "is-active" : ""} href="/region">
-            지역별
+            지역 통계
           </Link>
           <Link className={active === "guide" ? "is-active" : ""} href="/guide">
             가이드
@@ -51,7 +53,7 @@ export function Header({ active }: { active?: "home" | "region" | "guide" | "lea
               홈
             </Link>
             <Link className={active === "region" ? "is-active" : ""} href="/region">
-              지역별
+              지역 통계
             </Link>
             <Link className={active === "guide" ? "is-active" : ""} href="/guide">
               가이드
@@ -79,7 +81,7 @@ export function SearchBox({ compact = false }: { compact?: boolean }) {
         <circle cx="7" cy="7" r="5" stroke="currentColor" strokeWidth="1.6" />
         <path d="M11 11l3 3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
       </svg>
-      <input aria-label="단지명 또는 지역 검색" name="q" placeholder="단지명·지역으로 검색 (예: 광교 호수마을)" />
+      <input aria-label="단지명 또는 지역 검색" name="q" placeholder="단지명, 도로명, 지역으로 검색" />
     </form>
   );
 }
@@ -92,13 +94,12 @@ export function Footer() {
           <Link href="/about">소개</Link>
           <Link href="/guide">관리비 가이드</Link>
           <Link href="/learn">전문 가이드</Link>
-          <Link href="/about">데이터 방법론</Link>
-          <Link href="/about">개인정보처리방침</Link>
-          <Link href="/about">이용약관</Link>
-          <Link href="/about">데이터 정정·삭제 요청</Link>
+          <Link href="/contact">문의</Link>
+          <Link href="/privacy">개인정보처리방침</Link>
+          <Link href="/terms">이용약관</Link>
         </div>
         <p className="ft-note">
-          공공데이터를 가공한 정보로 원본과 차이가 있을 수 있습니다 · 일부 콘텐츠는 AI 작성 보조 · 출처: data.go.kr / K-apt
+          공공 데이터를 가공한 정보로 원본과 차이가 있을 수 있습니다. 일부 콘텐츠는 AI 작성 보조를 거치며 출처는 data.go.kr / K-apt입니다.
         </p>
       </div>
     </footer>
