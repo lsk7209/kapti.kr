@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Footer, Header, Section } from "@/components/layout";
+import { DataQualityBlock, Footer, Header, Section } from "@/components/layout";
 import { HomeSearch } from "@/components/home-search";
 
 const regions = [
@@ -176,6 +176,8 @@ export default function HomePage() {
             <span className="ilink-arr">→</span>
           </Link>
         </Section>
+
+        <DataQualityBlock variant="home" />
       </main>
       <Footer />
     </div>

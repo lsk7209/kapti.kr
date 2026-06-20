@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Footer, Header, Section } from "@/components/layout";
+import { DataQualityBlock, Footer, Header, Section } from "@/components/layout";
 import { JsonLd } from "@/components/json-ld";
 import { regionOverview } from "@/lib/seo-pages";
 import { absoluteUrl, siteConfig } from "@/lib/site";
@@ -71,6 +71,8 @@ export default function RegionIndexPage() {
             ))}
           </div>
         </Section>
+
+        <DataQualityBlock variant="region" />
       </main>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Header, Footer } from "@/components/layout";
+import { DataQualityBlock, Header, Footer } from "@/components/layout";
 import { posts } from "@/lib/posts";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 import { JsonLd } from "@/components/json-ld";
@@ -73,6 +73,8 @@ export default function BlogIndexPage() {
             </Link>
           ))}
         </section>
+
+        <DataQualityBlock variant="blog" />
       </main>
       <Footer />
     </div>

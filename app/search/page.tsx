@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Footer, Header, SearchBox } from "@/components/layout";
+import { DataQualityBlock, Footer, Header, SearchBox } from "@/components/layout";
 import { searchItems } from "@/lib/seo-pages";
 
 type PageProps = {
@@ -57,6 +57,8 @@ export default async function SearchPage({ searchParams }: PageProps) {
             </div>
           )}
         </section>
+
+        <DataQualityBlock variant="search" />
       </main>
       <Footer />
     </div>

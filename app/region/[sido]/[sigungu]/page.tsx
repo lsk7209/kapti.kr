@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Footer, Header, Section } from "@/components/layout";
+import { DataQualityBlock, Footer, Header, Section } from "@/components/layout";
 import { JsonLd } from "@/components/json-ld";
 import { regionDetail } from "@/lib/seo-pages";
 import { absoluteUrl, siteConfig } from "@/lib/site";
@@ -114,6 +114,8 @@ export default async function RegionDetailPage({ params }: PageProps) {
             })}
           </div>
         </Section>
+
+        <DataQualityBlock variant="region-detail" />
       </main>
       <Footer />
     </div>

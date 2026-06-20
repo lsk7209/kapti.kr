@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Footer, Header, Section } from "@/components/layout";
+import { DataQualityBlock, Footer, Header, Section } from "@/components/layout";
 import { learnPages } from "@/lib/seo-pages";
 
 export const metadata: Metadata = {
@@ -37,6 +37,8 @@ export default function LearnIndexPage() {
             ))}
           </div>
         </Section>
+
+        <DataQualityBlock variant="learn" />
       </main>
       <Footer />
     </div>
